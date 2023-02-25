@@ -7,6 +7,9 @@ import levels from "./levels";
 const maxLevel = 24;
 
 function App() {
+    // pre-added css is needed for others to work.
+    // adding-css to other entity than "sea" is also needed
+
     const [level, setLevel] = useState(1);
     const [levelDetails, setLevelDetails] = useState(levels[0])
     const [answer, setAnswer] = useState("")
@@ -18,7 +21,8 @@ function App() {
 
     return (
         <div className="container">
-            <LeftPanel levelPanel={{level, setLevel, maxLevel}} levelDetails={levelDetails} answer={answer} setAnswer={setAnswer}/>
+            <LeftPanel levelPanel={{level, setLevel, maxLevel}} levelDetails={levelDetails} answer={answer}
+                       setAnswer={setAnswer}/>
             <RightPanel levelDetails={levelDetails} answer={answer}/>
         </div>
     );

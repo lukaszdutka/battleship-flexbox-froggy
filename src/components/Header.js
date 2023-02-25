@@ -22,9 +22,9 @@ function Header({levelPanel}) {
                 <h1 className="title">Battleship Flexbox</h1>
             </div>
             <div id="level-counter">
-                <AiFillCaretLeft onClick={decreaseLevel}/>
+                <AiFillCaretLeft onClick={decreaseLevel} className="clickable"/>
                 level {level} of {maxLevel}
-                <AiFillCaretRight onClick={increaseLevel}/>
+                <AiFillCaretRight onClick={increaseLevel} className="clickable"/>
             </div>
         </div>
     );
