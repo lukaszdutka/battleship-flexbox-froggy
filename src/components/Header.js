@@ -2,7 +2,8 @@ import React from 'react';
 import "./Header.css"
 import {AiFillCaretLeft, AiFillCaretRight} from "react-icons/ai";
 
-function Header({level, setLevel, maxLevel}) {
+function Header({levelPanel}) {
+    const {level, setLevel, maxLevel} = levelPanel;
 
     const decreaseLevel = () => {
         if (level > 1) {

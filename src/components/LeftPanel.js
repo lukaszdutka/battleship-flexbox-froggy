@@ -3,12 +3,12 @@ import Editor from "./Editor";
 import Instructions from "./Instructions";
 import Header from "./Header";
 
-const LeftPanel = ({level, setLevel, maxLevel}) => {
+const LeftPanel = ({levelPanel, levelDetails}) => {
     return (
         <div className="left-panel-container">
-            <Header level={level} setLevel={setLevel} maxLevel={maxLevel}/>
-            <Instructions/>
-            <Editor/>
+            <Header levelPanel={levelPanel}/>
+            <Instructions instructions={levelDetails.instructions}/>
+            <Editor editor={levelDetails.editor}/>
         </div>
     );
 }
