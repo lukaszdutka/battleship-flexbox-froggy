@@ -1,6 +1,6 @@
 import "./Editor.css"
 
-const Editor = ({editor}) => {
+const Editor = ({editor, answer, setAnswer}) => {
     const {codeBefore, codeAfter, requiredLines} = editor;
 
     const calculateLines = (string, requiredLines) => (string.match(/\n/g) || []).length + 3 + requiredLines
@@ -14,7 +14,7 @@ const Editor = ({editor}) => {
                 </pre>
                 <pre className="code grid-part">
                     <span>{codeBefore}</span>
-                    <textarea id="code-text"/>
+                    <textarea id="code-text" value={answer} onChange={e => setAnswer(e.target.value)}/>
                     <span>{codeAfter}</span>
                 </pre>
             </div>

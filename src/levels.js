@@ -20,7 +20,9 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        solution: {}
+        solution_css: {
+            "justify-content": "flex-end"
+        }
     },
     {
         id: 2,

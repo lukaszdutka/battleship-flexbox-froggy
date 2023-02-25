@@ -9,6 +9,7 @@ const maxLevel = 24;
 function App() {
     const [level, setLevel] = useState(1);
     const [levelDetails, setLevelDetails] = useState(levels[0])
+    const [answer, setAnswer] = useState("")
 
     useEffect(() => {
         const lvl = levels.find(lvl => lvl.id === level)
@@ -17,8 +18,8 @@ function App() {
 
     return (
         <div className="container">
-            <LeftPanel levelPanel={{level, setLevel, maxLevel}} levelDetails={levelDetails}/>
-            <RightPanel levelDetails={levelDetails}/>
+            <LeftPanel levelPanel={{level, setLevel, maxLevel}} levelDetails={levelDetails} answer={answer} setAnswer={setAnswer}/>
+            <RightPanel levelDetails={levelDetails} answer={answer}/>
         </div>
     );
 }
