@@ -357,7 +357,7 @@ const levels = [
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
             codeAfter: "}",
-            requiredLines: 2
+            requiredLines: 1
         },
         board: {
             targets: greenTarget(5) + redTarget(5) + blueTarget(5),
@@ -425,7 +425,7 @@ const levels = [
     {
         id: 24,
         instructions: `
-            <p>Bring the frogs home one last time by using the CSS properties you've learned:</p><ul><li><code class="help">justify-content</code></li><li><code class="help">align-items</code></li><li><code class="help">flex-direction</code></li><li><code class="help">order</code></li><li><code class="help">align-self</code></li><li><code class="help">flex-wrap</code></li><li><code class="help">flex-flow</code></li><li><code class="help">align-content</code><img src="https://code.org/api/hour/finish_flexbox_froggy.png"></li></ul>
+            <p>Target the battleships one last time by using the CSS properties you've learned:</p><ul><li><code class="help">justify-content</code></li><li><code class="help">align-items</code></li><li><code class="help">flex-direction</code></li><li><code class="help">order</code></li><li><code class="help">align-self</code></li><li><code class="help">flex-wrap</code></li><li><code class="help">flex-flow</code></li><li><code class="help">align-content</code><img src="https://code.org/api/hour/finish_flexbox_froggy.png"></li></ul>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
