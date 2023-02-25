@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 
 const RightPanel = ({levelDetails, answer}) => {
     const {targets, ships} = levelDetails.board;
+    const solutionStyles = levelDetails.solutionStyles;
 
     const [customStyles, setCustomStyles] = useState({})
     //bug:
@@ -32,7 +33,8 @@ const RightPanel = ({levelDetails, answer}) => {
             return answer.split("\n")
                 .reduce((acc, line) => {
                     const split = line.replaceAll(";", "").split(":").map(e => e.trim());
-                    return split[1].length === 0
+                    console.log({line})
+                    return split[0].length === 0
                         ? acc
                         : {...acc, [split[0]]: split[1]};
                 }, {})
@@ -45,7 +47,7 @@ const RightPanel = ({levelDetails, answer}) => {
         <div id="right-panel-container">
             <div id="board">
                 <div id="sea" style={customStyles} dangerouslySetInnerHTML={{__html: targets}}/>
-                <div id="background" dangerouslySetInnerHTML={{__html: ships}}/>
+                <div id="background" style={solutionStyles} dangerouslySetInnerHTML={{__html: ships}}/>
             </div>
         </div>
     );
