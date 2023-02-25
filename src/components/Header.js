@@ -3,17 +3,19 @@ import "./Header.css"
 import {AiFillCaretLeft, AiFillCaretRight} from "react-icons/ai";
 
 function Header({levelPanel}) {
-    const {level, setLevel, maxLevel} = levelPanel;
+    const {level, setLevel, maxLevel, clearAnswer} = levelPanel;
 
     const decreaseLevel = () => {
         if (level > 1) {
             setLevel(level - 1)
+            clearAnswer()
         }
     }
 
     const increaseLevel = () => {
         if (level < maxLevel) {
             setLevel(level + 1)
+            clearAnswer()
         }
     }
     return (

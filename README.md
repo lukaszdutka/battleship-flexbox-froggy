@@ -34,3 +34,4 @@ Clone the repository and run `npm start` command.
 - [ ] footer with links to github etc.
 - [ ] different languages
 - [ ] credits to Flexbox Froggy in code 
+- [ ] Now the answer textarea is cleared between levels. Add retaining previously filled answers, even between sessions. 

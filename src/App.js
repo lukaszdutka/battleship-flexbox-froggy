@@ -19,9 +19,13 @@ function App() {
         setLevelDetails(lvl !== undefined ? lvl : levels[0])
     }, [level])
 
+    const clearAnswer = () => {
+        setAnswer("")
+    }
+
     return (
         <div className="container">
-            <LeftPanel levelPanel={{level, setLevel, maxLevel}} levelDetails={levelDetails} answer={answer}
+            <LeftPanel levelPanel={{level, setLevel, maxLevel, clearAnswer}} levelDetails={levelDetails} answer={answer}
                        setAnswer={setAnswer}/>
             <RightPanel levelDetails={levelDetails} answer={answer}/>
         </div>
