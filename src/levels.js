@@ -20,7 +20,11 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        solution_css: {
+        board: {
+            targets: `<div class="target"></div>`,
+            ships: `<div class="ship"></div>`
+        }
+        , solution_css: {
             "justify-content": "flex-end"
         }
     },
@@ -43,7 +47,10 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        solution: {}
+        board: {
+            targets: `<div class="target"></div>`,
+            ships: `<div class="ship"></div>`
+        }, solution_css: {}
     }
 ]
 

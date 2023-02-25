@@ -1,9 +1,10 @@
 import "./RightPanel.css"
 import {useEffect, useState} from "react";
 
-const RightPanel = ({targets, ships, answer}) => {
-    const [customStyles, setCustomStyles] = useState({})
+const RightPanel = ({levelDetails, answer}) => {
+    const {targets, ships} = levelDetails.board;
 
+    const [customStyles, setCustomStyles] = useState({})
     //bug:
     //Right now, when you input `answer` into answer area, key by key: i.e.
     // "background-color: red;"
@@ -15,7 +16,7 @@ const RightPanel = ({targets, ships, answer}) => {
     // happily, when you delete whole line then it resets to previous style, which is half-success.
 
     useEffect(() => {
-        if(answer === ""){
+        if (answer === "") {
             setCustomStyles({})
         }
         const styles = tryParseInputStyles(answer);
@@ -42,8 +43,10 @@ const RightPanel = ({targets, ships, answer}) => {
 
     return (
         <div id="right-panel-container">
-            <div id="sea" style={customStyles}>{targets}</div>
-            <div id="background">{ships}</div>
+            <div id="board">
+                <div id="sea" style={customStyles} dangerouslySetInnerHTML={{__html: targets}}/>
+                <div id="background" dangerouslySetInnerHTML={{__html: ships}}/>
+            </div>
         </div>
     );
 }
