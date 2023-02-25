@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import LeftPanel from "./components/LeftPanel";
+import RightPanel from "./components/RightPanel";
+import {useEffect, useState} from "react";
+
+const maxLevel = 24;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [level, setLevel] = useState(1);
+
+    const [levelDetails, setLevelDetails] = useState({})
+
+    useEffect(() => {
+        //take levelDetails from somewhere and set it
+        //setLevelDetails({})
+    },[level])
+
+    return (
+        <div className="container">
+            <LeftPanel level={level} setLevel={setLevel} maxLevel={maxLevel}/>
+            <RightPanel />
+        </div>
+    );
 }
 
 export default App;

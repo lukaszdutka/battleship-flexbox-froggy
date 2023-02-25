@@ -1,0 +1,13 @@
+#right-panel-container {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+#sea {
+    width: 40vw;
+    height: 40vw;
+    background-color: rgb(40, 189, 209);
+}

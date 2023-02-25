@@ -1,0 +1,51 @@
+.editor {
+    color: #b4b4b4;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.css {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+pre {
+    white-space: pre-wrap;
+    tab-size: 4;
+}
+
+.grid-part {
+    /*display: block; !*not needed?*!*/
+    padding: 10px;
+    margin: 0;
+}
+
+.lines {
+    grid-column-start: 1;
+    background-color: #323436;
+    text-align: right;
+}
+
+.code {
+    grid-column-start: 2;
+    background-color: #2c2c2c;
+    display: flex;
+    flex-direction: column;
+}
+
+#code-text {
+    margin-left: 35px;
+    width: calc(100% - 35px);
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+
+    border: none;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+
+    height: 16px;
+}

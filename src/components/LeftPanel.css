@@ -1,0 +1,16 @@
+.left-panel-container {
+    grid-column: 1;
+    padding: 2em;
+    color: whitesmoke;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#level-counter {
+    background-color: #756c6c;
+    padding: 1vh 1vw;
+}
