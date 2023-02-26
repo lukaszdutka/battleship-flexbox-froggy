@@ -150,7 +150,7 @@ const levels = [
     {
         id: 8,
         instructions: `
-            <p>The ships need to get in the same order as their ships using <code class="help">flex-direction</code>. This CSS property defines the direction items are placed in the container, and accepts the following values:</p><ul><li><code>row</code>: Items are placed the same as the text direction.</li><li><code>row-reverse</code>: Items are placed opposite to the text direction.</li><li><code>column</code>: Items are placed top to bottom.</li><li><code>column-reverse</code>: Items are placed bottom to top.</li></ul>
+            <p>The targets need to get in the same order as their ships using <code class="help">flex-direction</code>. This CSS property defines the direction items are placed in the container, and accepts the following values:</p><ul><li><code>row</code>: Items are placed the same as the text direction.</li><li><code>row-reverse</code>: Items are placed opposite to the text direction.</li><li><code>column</code>: Items are placed top to bottom.</li><li><code>column-reverse</code>: Items are placed bottom to top.</li></ul>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -167,7 +167,7 @@ const levels = [
     {
         id: 9,
         instructions: `
-            <p>Help the ships find their column of ships using <code class="help">flex-direction</code>. This CSS property defines the direction items are placed in the container, and accepts the following values:</p><ul><li><code>row</code>: Items are placed the same as the text direction.</li><li><code>row-reverse</code>: Items are placed opposite to the text direction.</li><li><code>column</code>: Items are placed top to bottom.</li><li><code>column-reverse</code>: Items are placed bottom to top.</li></ul>
+            <p>Help the targets find their column of ships using <code class="help">flex-direction</code>. This CSS property defines the direction items are placed in the container, and accepts the following values:</p><ul><li><code>row</code>: Items are placed the same as the text direction.</li><li><code>row-reverse</code>: Items are placed opposite to the text direction.</li><li><code>column</code>: Items are placed top to bottom.</li><li><code>column-reverse</code>: Items are placed bottom to top.</li></ul>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -220,7 +220,7 @@ const levels = [
     {
         id: 12,
         instructions: `
-            <p>Help the ships find their ships using <code class="help">flex-direction</code> and <code class="help">justify-content</code>.</p><p>Notice that when the flex direction is a column, <code class="help">justify-content</code> changes to the vertical and <code class="help">align-items</code> to the horizontal.</p>
+            <p>Help the targets find their ships using <code class="help">flex-direction</code> and <code class="help">justify-content</code>.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -238,7 +238,7 @@ const levels = [
     {
         id: 13,
         instructions: `
-            <p>Help the ships find their ships using <code class="help">flex-direction</code> and <code class="help">justify-content</code>.</p><p>Notice that when the flex direction is a column, <code class="help">justify-content</code> changes to the vertical and <code class="help">align-items</code> to the horizontal.</p>
+            <p>Help the targets find their ships using <code class="help">flex-direction</code>, <code class="help">justify-content</code>, and <code class="help">align-items</code>.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -264,7 +264,7 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        board: flat(red(), green(), blue()),
+        board: flat(green(), red(), blue()),
         styles: {
             ships_red: {"order": 1}
         },
@@ -273,7 +273,7 @@ const levels = [
     {
         id: 15,
         instructions: `
-            <p>Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the <code class="help">order</code> property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).</p><p>Use the <code class="help">order</code> property to reorder the ships according to their ships.</p>
+            <p>Use the <code class="help">order</code> property to send the red target to his red ship.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;\n}\n\n.red {",
