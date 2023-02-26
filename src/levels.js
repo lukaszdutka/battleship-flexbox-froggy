@@ -267,7 +267,8 @@ const levels = [
         board: flat(red(), green(), blue()),
         styles: {
             ships_red: {"order": 1}
-        }
+        },
+        toEdit: "red"
     },
     {
         id: 15,
@@ -282,7 +283,8 @@ const levels = [
         board: flat(green(3), red(), green()),
         styles: {
             ships_red: {"order": -1}
-        }
+        },
+        toEdit: "red"
     },
     {
         id: 16,
@@ -297,7 +299,8 @@ const levels = [
         board: flat(green(2), red(), green(2)),
         styles: {
             ships_red: {"align-self": "flex-end"}
-        }
+        },
+        toEdit: "red"
     },
     {
         id: 17,
@@ -315,7 +318,8 @@ const levels = [
                 "order": 1,
                 "align-self": "flex-end"
             }
-        }
+        },
+        toEdit: "red"
     },
     {
         id: 18,

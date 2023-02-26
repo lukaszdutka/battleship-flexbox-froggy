@@ -2,7 +2,7 @@ import "./RightPanel.css"
 import {useEffect, useState} from "react";
 
 const RightPanel = ({levelDetails, answer}) => {
-    const {board, styles} = levelDetails;
+    const {board, styles, toEdit} = levelDetails;
 
     const [customStyles, setCustomStyles] = useState({})
     //bug:
@@ -24,15 +24,22 @@ const RightPanel = ({levelDetails, answer}) => {
             setCustomStyles({})
             return;
         }
-        setCustomStyles({targets: styles}) //todo decide which one
+        if (toEdit) {
+            setCustomStyles({[toEdit]: styles})
+        } else {
+            setCustomStyles({targets: styles})
+        }
     }, [answer])
+
+    useEffect(() => {
+        console.log(customStyles)
+    }, [customStyles])
 
     function tryParseInputStyles(answer) {
         try {
             return answer.split("\n")
                 .reduce((acc, line) => {
                     const split = line.replaceAll(";", "").split(":").map(e => e.trim());
-                    console.log({line})
                     return split[0].length === 0
                         ? acc
                         : {...acc, [split[0]]: split[1]};
@@ -50,16 +57,15 @@ const RightPanel = ({levelDetails, answer}) => {
             return <div className={classes} style={{...startingStyles, ...playerStyle}}/>
         });
 
-    const renderShips = (board, startingCustomStyles, playerStyles) =>
+    const renderShips = (board, startingCustomStyles) =>
         board.map(color => {
             const startingStyles = startingCustomStyles[`ships_${color}`];
-            const playerStyle = playerStyles[color];
             const classes = `ship ${color}`
-            return <div className={classes} style={{...startingStyles, ...playerStyle}}/>
+            return <div className={classes} style={startingStyles}/>
         });
 
     const targets = renderTargets(board, styles, customStyles);
-    const ships = renderShips(board, styles, customStyles);
+    const ships = renderShips(board, styles);
 
     return (
         <div id="right-panel-container">

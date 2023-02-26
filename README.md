@@ -25,7 +25,7 @@ Clone the repository and run `npm start` command.
 # todo
 - [x] ~~working demo~~
 - [ ] FIX bug "when deleting your answer, some dynamic css is still there until value of css is cleared"
-- [ ] FIX levels when you need to modify css of `.targets` instead of `.sea` 
+- [x] FIX levels when you need to modify css of `.targets` instead of `.sea` 
 - [x] FIX levels when it requires modified starting css of `.sea`
 - [ ] Fully translate froggy texts to battleship-themed
 - [ ] add some QoL upgrades
