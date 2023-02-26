@@ -26,7 +26,7 @@ Clone the repository and run `npm start` command.
 - [x] ~~working demo~~
 - [ ] FIX bug "when deleting your answer, some dynamic css is still there until value of css is cleared"
 - [ ] FIX levels when you need to modify css of `.targets` instead of `.sea` 
-- [ ] FIX levels when you need to modify starting css of `.sea`
+- [x] FIX levels when it requires modified starting css of `.sea`
 - [ ] Fully translate froggy texts to battleship-themed
 - [ ] add some QoL upgrades
   - [ ] level chooser, not only previous/next
@@ -34,4 +34,6 @@ Clone the repository and run `npm start` command.
 - [ ] footer with links to github etc.
 - [ ] different languages
 - [ ] credits to Flexbox Froggy in code 
-- [ ] Now the answer textarea is cleared between levels. Add retaining previously filled answers, even between sessions. 
+- [x] Now the answer textarea is cleared between levels. 
+  - [ ] Add retaining previously filled answers, even between sessions. 
+- [ ] refactor "levels.js" to *.jsx 

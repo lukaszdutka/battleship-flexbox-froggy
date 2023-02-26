@@ -2,8 +2,7 @@ import "./RightPanel.css"
 import {useEffect, useState} from "react";
 
 const RightPanel = ({levelDetails, answer}) => {
-    const {targets, ships} = levelDetails.board;
-    const solutionStyles = levelDetails.solutionStyles;
+    const {board, styles} = levelDetails;
 
     const [customStyles, setCustomStyles] = useState({})
     //bug:
@@ -25,7 +24,7 @@ const RightPanel = ({levelDetails, answer}) => {
             setCustomStyles({})
             return;
         }
-        setCustomStyles(styles)
+        setCustomStyles({targets: styles}) //todo decide which one
     }, [answer])
 
     function tryParseInputStyles(answer) {
@@ -43,11 +42,34 @@ const RightPanel = ({levelDetails, answer}) => {
         }
     }
 
+    const renderTargets = (board, startingCustomStyles, playerStyles) =>
+        board.map(color => {
+            const startingStyles = startingCustomStyles[`targets_${color}`];
+            const playerStyle = playerStyles[color];
+            const classes = `target ${color}`
+            return <div className={classes} style={{...startingStyles, ...playerStyle}}/>
+        });
+
+    const renderShips = (board, startingCustomStyles, playerStyles) =>
+        board.map(color => {
+            const startingStyles = startingCustomStyles[`ships_${color}`];
+            const playerStyle = playerStyles[color];
+            const classes = `ship ${color}`
+            return <div className={classes} style={{...startingStyles, ...playerStyle}}/>
+        });
+
+    const targets = renderTargets(board, styles, customStyles);
+    const ships = renderShips(board, styles, customStyles);
+
     return (
         <div id="right-panel-container">
             <div id="board">
-                <div id="sea" style={customStyles} dangerouslySetInnerHTML={{__html: targets}}/>
-                <div id="background" style={solutionStyles} dangerouslySetInnerHTML={{__html: ships}}/>
+                <div id="sea" style={{...styles.targets, ...customStyles.targets}}>
+                    {targets}
+                </div>
+                <div id="background" style={styles.ships}>
+                    {ships}
+                </div>
             </div>
         </div>
     );

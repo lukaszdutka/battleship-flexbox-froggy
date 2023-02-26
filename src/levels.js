@@ -1,34 +1,11 @@
-const target = (color) => {
-    return `<div class="target ${color}"></div>`
-}
+const repeat = (color, number = 1) => Array(number).fill(color)
+const repeatArray = (number, arr) => Array(number).fill(arr).flat();
 
-const ship = (color) => {
-    return `<div class="ship ${color}"></div>`
-}
+const red = (number = 1) => repeat("red", number)
+const green = (number = 1) => repeat("green", number)
+const blue = (number = 1) => repeat("blue", number)
 
-const greenTarget = (number = 1) => {
-    return target("green").repeat(number);
-}
-
-const redTarget = (number = 1) => {
-    return target("red").repeat(number);
-}
-
-const blueTarget = (number = 1) => {
-    return target("blue").repeat(number);
-}
-
-const greenShip = (number = 1) => {
-    return ship("green").repeat(number);
-}
-
-const redShip = (number = 1) => {
-    return ship("red").repeat(number);
-}
-
-const blueShip = (number = 1) => {
-    return ship("blue").repeat(number);
-}
+const flat = (...arrays) => arrays.flat();
 
 
 const levels = [
@@ -53,12 +30,9 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        board: {
-            targets: redTarget(),
-            ships: redShip()
-        },
-        solutionStyles: {
-            "justify-content": "flex-end"
+        board: red(),
+        styles: {
+            ships: {"justify-content": "flex-end"},
         }
     },
     {
@@ -80,11 +54,10 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        board: {
-            targets: redTarget() + greenTarget(),
-            ships: redShip() + greenShip()
-        },
-        solutionStyles: {"justify-content": "center"}
+        board: flat(red(), green()),
+        styles: {
+            ships: {"justify-content": "center"},
+        }
     },
     {
         id: 3,
@@ -101,11 +74,10 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        board: {
-            targets: redTarget() + greenTarget() + blueTarget(),
-            ships: redShip() + greenShip() + blueShip()
-        },
-        solutionStyles: {"justify-content": "space-around"}
+        board: flat(red(), green(), blue()),
+        styles: {
+            ships: {"justify-content": "space-around"},
+        }
     },
     {
         id: 4,
@@ -119,11 +91,10 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        board: {
-            targets: redTarget() + greenTarget() + blueTarget(),
-            ships: redShip() + greenShip() + blueShip()
-        },
-        solutionStyles: {"justify-content": "space-between"}
+        board: flat(red(), green(), blue()),
+        styles: {
+            ships: {"justify-content": "space-between"},
+        }
     },
     {
         id: 5,
@@ -135,11 +106,10 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        board: {
-            targets: redTarget() + greenTarget() + blueTarget(),
-            ships: redShip() + greenShip() + blueShip()
-        },
-        solutionStyles: {"align-items": "flex-end"}
+        board: flat(red(), green(), blue()),
+        styles: {
+            ships: {"align-items": "flex-end"},
+        }
     },
     {
         id: 6,
@@ -151,13 +121,12 @@ const levels = [
             codeAfter: "}",
             requiredLines: 2
         },
-        board: {
-            targets: redTarget(),
-            ships: redShip()
-        },
-        solutionStyles: {
-            "justify-content": "center",
-            "align-items": "center"
+        board: red(),
+        styles: {
+            ships: {
+                "justify-content": "center",
+                "align-items": "center"
+            },
         }
     },
     {
@@ -170,13 +139,12 @@ const levels = [
             codeAfter: "}",
             requiredLines: 2
         },
-        board: {
-            targets: redTarget() + greenTarget() + blueTarget(),
-            ships: redShip() + greenShip() + blueShip()
-        },
-        solutionStyles: {
-            "justify-content": "space-around",
-            "align-items": "flex-end"
+        board: flat(red(), green(), blue()),
+        styles: {
+            ships: {
+                "justify-content": "space-around",
+                "align-items": "flex-end"
+            }
         }
     },
     {
@@ -189,12 +157,11 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        board: {
-            targets: redTarget() + greenTarget() + blueTarget(),
-            ships: redShip() + greenShip() + blueShip()
-        },
-        solutionStyles: {
-            "flex-direction": "row-reverse"
+        board: flat(red(), green(), blue()),
+        styles: {
+            ships: {
+                "flex-direction": "row-reverse"
+            }
         }
     },
     {
@@ -207,12 +174,11 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        board: {
-            targets: redTarget() + greenTarget() + blueTarget(),
-            ships: redShip() + greenShip() + blueShip()
-        },
-        solutionStyles: {
-            "flex-direction": "column"
+        board: flat(red(), green(), blue()),
+        styles: {
+            ships: {
+                "flex-direction": "column"
+            }
         }
     },
     {
@@ -225,13 +191,12 @@ const levels = [
             codeAfter: "}",
             requiredLines: 2
         },
-        board: {
-            targets: redTarget() + greenTarget() + blueTarget(),
-            ships: redShip() + greenShip() + blueShip()
-        },
-        solutionStyles: {
-            "flex-direction": "row-reverse",
-            "justify-content": "flex-end"
+        board: flat(red(), green(), blue()),
+        styles: {
+            ships: {
+                "flex-direction": "row-reverse",
+                "justify-content": "flex-end"
+            }
         }
     },
     {
@@ -244,13 +209,12 @@ const levels = [
             codeAfter: "}",
             requiredLines: 2
         },
-        board: {
-            targets: redTarget() + greenTarget() + blueTarget(),
-            ships: redShip() + greenShip() + blueShip()
-        },
-        solutionStyles: {
-            "flex-direction": "column",
-            "justify-content": "flex-end"
+        board: flat(red(), green(), blue()),
+        styles: {
+            ships: {
+                "flex-direction": "column",
+                "justify-content": "flex-end"
+            }
         }
     },
     {
@@ -263,13 +227,12 @@ const levels = [
             codeAfter: "}",
             requiredLines: 2
         },
-        board: {
-            targets: redTarget() + greenTarget() + blueTarget(),
-            ships: redShip() + greenShip() + blueShip()
-        },
-        solutionStyles: {
-            "flex-direction": "column-reverse",
-            "justify-content": "space-between"
+        board: flat(red(), green(), blue()),
+        styles: {
+            ships: {
+                "flex-direction": "column-reverse",
+                "justify-content": "space-between"
+            }
         }
     },
     {
@@ -282,32 +245,76 @@ const levels = [
             codeAfter: "}",
             requiredLines: 3
         },
-        board: {
-            targets: redTarget() + greenTarget() + blueTarget(),
-            ships: redShip() + greenShip() + blueShip()
-        },
-        solutionStyles: {
-            "flex-direction": "row-reverse",
-            "justify-content": "center",
-            "align-items": "flex-end"
+        board: flat(red(), green(), blue()),
+        styles: {
+            ships: {
+                "flex-direction": "row-reverse",
+                "justify-content": "center",
+                "align-items": "flex-end"
+            }
         }
     },
-    { //todo doesnt work 14 throught 17 doesnt work because of styles needed to be on .ship, not on .sea
+    {
         id: 14,
         instructions: `
             <p>Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the <code class="help">order</code> property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).</p><p>Use the <code class="help">order</code> property to reorder the frogs according to their lilypads.</p>
         `,
         editor: {
-            codeBefore: "#sea {\n\tdisplay: flex;\n}\n\n.yellow {",
+            codeBefore: "#sea {\n\tdisplay: flex;\n}\n\n.red {",
             codeAfter: "}",
             requiredLines: 1
         },
-        board: {
-            targets: redTarget() + greenTarget() + blueTarget(),
-            ships: redShip() + greenShip() + blueShip()
+        board: flat(red(), green(), blue()),
+        styles: {
+            ships_red: {"order": 1}
+        }
+    },
+    {
+        id: 15,
+        instructions: `
+            <p>Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the <code class="help">order</code> property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).</p><p>Use the <code class="help">order</code> property to reorder the frogs according to their lilypads.</p>
+        `,
+        editor: {
+            codeBefore: "#sea {\n\tdisplay: flex;\n}\n\n.red {",
+            codeAfter: "}",
+            requiredLines: 1
         },
-        solutionStyles: {
-            "order": 1 //but for .red, not for .sea
+        board: flat(green(3), red(), green()),
+        styles: {
+            ships_red: {"order": -1}
+        }
+    },
+    {
+        id: 16,
+        instructions: `
+            <p>Another property you can apply to individual items is <code class="help">align-self</code>. This property accepts the same values as <code class="help">align-items</code> and its value for the specific item.</p>
+        `,
+        editor: {
+            codeBefore: "#sea {\n\tdisplay: flex;\n}\n\n.red {",
+            codeAfter: "}",
+            requiredLines: 1
+        },
+        board: flat(green(2), red(), green(2)),
+        styles: {
+            ships_red: {"align-self": "flex-end"}
+        }
+    },
+    {
+        id: 17,
+        instructions: `
+            <p>Combine <code class="help">order</code> with <code class="help">align-self</code> to help the frogs to their destinations.</p>
+        `,
+        editor: {
+            codeBefore: "#sea {\n\tdisplay: flex;\n}\n\n.red {",
+            codeAfter: "}",
+            requiredLines: 2
+        },
+        board: flat(green(3), red(2)),
+        styles: {
+            ships_red: {
+                "order": 1,
+                "align-self": "flex-end"
+            }
         }
     },
     {
@@ -320,12 +327,11 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        board: {
-            targets: redTarget() + greenTarget(5) + blueTarget(),
-            ships: redShip() + greenShip(5) + blueShip()
-        },
-        solutionStyles: {
-            "flex-wrap": "wrap"
+        board: flat(red(), green(5), blue()),
+        styles: {
+            ships: {
+                "flex-wrap": "wrap"
+            }
         }
     },
     {
@@ -340,13 +346,12 @@ const levels = [
             codeAfter: "}",
             requiredLines: 2
         },
-        board: {
-            targets: greenTarget(5) + redTarget(5) + blueTarget(5),
-            ships: greenShip(5) + redShip(5) + blueShip(5)
-        },
-        solutionStyles: {
-            "flex-direction": "column",
-            "flex-wrap": "wrap"
+        board: flat(red(5), green(5), blue(5)),
+        styles: {
+            ships: {
+                "flex-direction": "column",
+                "flex-wrap": "wrap"
+            }
         }
     },
     {
@@ -359,15 +364,14 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        board: {
-            targets: greenTarget(5) + redTarget(5) + blueTarget(5),
-            ships: greenShip(5) + redShip(5) + blueShip(5)
-        },
-        solutionStyles: {
-            "flex-flow": "column wrap"
+        board: flat(red(5), green(5), blue(5)),
+        styles: {
+            ships: {
+                "flex-flow": "column wrap"
+            }
         }
     },
-    { //todo doesn't work because it prerequires additional hardcoded styling.
+    {
         id: 21,
         instructions: `
             <p>DOESN'T WORK, SORRY. WIP</p><p>The two properties <code class="help">flex-direction</code> and <code class="help">flex-wrap</code> are used so often together that the shorthand property <code class="help">flex-flow</code> was created to combine them. This shorthand property accepts the value of the two properties separated by a space.</p><p>For example, you can use <code>flex-flow: row wrap</code> to set rows and wrap them.</p><p>Try using <code class="help">flex-flow</code> to repeat the previous level.</p>
@@ -377,15 +381,18 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        board: {
-            targets: redTarget(15),
-            ships: redShip(15)
-        },
-        solutionStyles: {
-            "align-content": "flex-start",
+        board: red(15),
+        styles: {
+            targets: {
+                "flex-wrap": "wrap",
+            },
+            ships: {
+                "flex-wrap": "wrap",
+                "align-content": "flex-start"
+            }
         }
     },
-    { //todo doesn't work because it prerequires additional hardcoded styling.
+    {
         id: 22,
         instructions: `
             <p>DOESN'T WORK, SORRY. WIP</p><p>Now the current has bunched the lilypads at the bottom. Use <code class="help">align-content</code> to guide the frogs there.</p>
@@ -395,15 +402,18 @@ const levels = [
             codeAfter: "}",
             requiredLines: 1
         },
-        board: {
-            targets: redTarget(15),
-            ships: redShip(15)
-        },
-        solutionStyles: {
-            "align-content": "flex-end",
+        board: red(15),
+        styles: {
+            targets: {
+                "flex-wrap": "wrap",
+            },
+            ships: {
+                "flex-wrap": "wrap",
+                "align-content": "flex-end"
+            }
         }
     },
-    { //todo doesn't work because it prerequires additional hardcoded styling.
+    {
         id: 23,
         instructions: `
             <p>DOESN'T WORK, SORRY. WIP</p><p>The frogs have had a party, but it is time to go home. Use a combination of <code class="help">flex-direction</code> and <code class="help">align-content</code> to get them to their lilypads.</p>
@@ -413,13 +423,16 @@ const levels = [
             codeAfter: "}",
             requiredLines: 2
         },
-        board: {
-            targets: (redTarget() + greenTarget(3) + blueTarget()).repeat(3),
-            ships: (redShip() + redShip(3) + blueShip()).repeat(3)
-        },
-        solutionStyles: {
-            "flex-direction": "column-reverse",
-            "align-content": "center"
+        board: repeatArray(3, flat(red(), green(3), blue())),
+        styles: {
+            targets: {
+                "flex-wrap": "wrap",
+            },
+            ships: {
+                "flex-wrap": "wrap",
+                "flex-direction": "column-reverse",
+                "align-content": "center"
+            }
         }
     },
     {
@@ -432,15 +445,14 @@ const levels = [
             codeAfter: "}",
             requiredLines: 4
         },
-        board: {
-            targets: redTarget() + greenTarget(4) + blueTarget(2),
-            ships: redShip() + greenShip(4) + blueShip(2)
-        },
-        solutionStyles: {
-            "flex-direction": "column-reverse",
-            "flex-wrap": "wrap-reverse",
-            "align-content": "space-between",
-            "justify-content": "center"
+        board: flat(red(), green(4), blue(2)),
+        styles: {
+            ships: {
+                "flex-direction": "column-reverse",
+                "flex-wrap": "wrap-reverse",
+                "align-content": "space-between",
+                "justify-content": "center"
+            }
         }
     }
 ]
