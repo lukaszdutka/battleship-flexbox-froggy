@@ -1,3 +1,5 @@
+## Live demo link: [Battleship Flexbox](http://lukaszdutka.github.io/battleship-flexbox-froggy)
+
 # Battleship Flexbox v0.2
 
 Game designed to learn flexbox. Heavily inspired on [Flexbox Froggy](https://flexboxfroggy.com/). Basically Flexbox
