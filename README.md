@@ -15,10 +15,10 @@ React, JS
 # Gifs
 
 Solving first level. As you can see the board reacts in the real time.
-![](battleship_lvl1.gif)
+![](battleships_lvl5.gif)
 
-More complicated one, even 4 different css lines.
-![](battleship_lvl24.gif)
+More complicated one.
+![](battleship_lvl12.gif)
 
 # How to run
 
