@@ -37,28 +37,43 @@
 }
 
 .target {
-    background: url("../img/target.png") no-repeat center;
+    -webkit-animation: pulse 1s infinite ease-in-out alternate;
     background-size: 80%;
     width: 20%;
     height: 20%;
-    -webkit-animation: pulse 1s infinite alternate;
-}
-
-.red {
-    filter: drop-shadow(6px 6px 6px rgba(255, 0, 0, 1));
-}
-
-.green {
-    filter: drop-shadow(6px 6px 6px rgb(0, 255, 0));
-}
-
-.blue {
-    filter: drop-shadow(6px 6px 6px rgb(0, 0, 255));
 }
 
 .ship {
-    background: url("../img/ship.png") no-repeat center;
-    background-size: 80%;
     width: 20%;
     height: 20%;
+}
+
+.target.red {
+    background: url("../img/target_red.png") no-repeat center;
+    background-size: 80%;
+}
+
+.target.green {
+    background: url("../img/target_green.png") no-repeat center;
+    background-size: 80%;
+}
+
+.target.blue {
+    background: url("../img/target_blue.png") no-repeat center;
+    background-size: 80%;
+}
+
+.ship.red {
+    background: url("../img/ship_red.png") no-repeat center;
+    background-size: 80%;
+}
+
+.ship.green {
+    background: url("../img/ship_green.png") no-repeat center;
+    background-size: 80%;
+}
+
+.ship.blue {
+    background: url("../img/ship_blue.png") no-repeat center;
+    background-size: 80%;
 }
