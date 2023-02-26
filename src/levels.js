@@ -378,7 +378,7 @@ const levels = [
     {
         id: 21,
         instructions: `
-            <p>The two properties <code class="help">flex-direction</code> and <code class="help">flex-wrap</code> are used so often together that the shorthand property <code class="help">flex-flow</code> was created to combine them. This shorthand property accepts the value of the two properties separated by a space.</p><p>For example, you can use <code>flex-flow: row wrap</code> to set rows and wrap them.</p><p>Try using <code class="help">flex-flow</code> to repeat the previous level.</p>
+            <p>The targets are spread all over the sea, but the ships are bunched at the top. You can use <code class="help">align-content</code> to set how multiple lines are spaced apart from each other. This property takes the following values:</p><ul><li><code>flex-start</code>: Lines are packed at the top of the container.</li><li><code>flex-end</code>: Lines are packed at the bottom of the container.</li><li><code>center</code>: Lines are packed at the vertical center of the container.</li><li><code>space-between</code>: Lines display with equal spacing between them.</li><li><code>space-around</code>: Lines display with equal spacing around them.</li><li><code>stretch</code>: Lines are stretched to fit the container.</li></ul><p>This can be confusing, but <code class="help">align-content</code> determines the spacing between lines, while <code class="help">align-items</code> determines how the items as a whole are aligned within the container. When there is only one line, <code class="help">align-content</code> has no effect.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;\n\tflex-wrap: wrap;",
