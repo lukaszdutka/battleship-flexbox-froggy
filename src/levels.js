@@ -62,8 +62,8 @@ const levels = [
     {
         id: 3,
         instructions: `
-            <p>Help all three frogs find their lilypads just by using <code class="help">justify-content</code>. 
-                This time, the lilypads have lots of space all around them.
+            <p>Help all three targets aim their ships just by using <code class="help">justify-content</code>. 
+                This time, the ships have lots of space all around them.
             </p>
             <p>If you find yourself forgetting the possible values for a property, you can click on the property name 
                 to view them. Try clicking on <code class="help">justify-content</code>.
@@ -82,8 +82,8 @@ const levels = [
     {
         id: 4,
         instructions: `
-            <p>Now the lilypads on the edges have drifted to the shore, increasing the space between them. 
-                Use <code class="help">justify-content</code>. This time, the lilypads have equal spacing between them.
+            <p>Now the ships on the edges have drifted to the shore, increasing the space between them. 
+                Use <code class="help">justify-content</code>. This time, the ships have equal spacing between them.
             </p>
         `,
         editor: {
@@ -99,7 +99,7 @@ const levels = [
     {
         id: 5,
         instructions: `
-            <p>Now use <code class="help">align-items</code> to help the frogs get to the bottom of the pond. This CSS property aligns items vertically and accepts the following values:</p><ul><li><code>flex-start</code>: Items align to the top of the container.</li><li><code>flex-end</code>: Items align to the bottom of the container.</li><li><code>center</code>: Items align at the vertical center of the container.</li><li><code>baseline</code>: Items display at the baseline of the container.</li><li><code>stretch</code>: Items are stretched to fit the container.</li></ul>
+            <p>Now use <code class="help">align-items</code> to help the targets aim at the bottom of the sea. This CSS property aligns items vertically and accepts the following values:</p><ul><li><code>flex-start</code>: Items align to the top of the container.</li><li><code>flex-end</code>: Items align to the bottom of the container.</li><li><code>center</code>: Items align at the vertical center of the container.</li><li><code>baseline</code>: Items display at the baseline of the container.</li><li><code>stretch</code>: Items are stretched to fit the container.</li></ul>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -114,7 +114,7 @@ const levels = [
     {
         id: 6,
         instructions: `
-            <p>Lead the frog to the center of the pond using a combination of <code class="help">justify-content</code> and <code class="help">align-items</code>.</p>
+            <p>Lead the target to the center of the sea using a combination of <code class="help">justify-content</code> and <code class="help">align-items</code>.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -132,7 +132,7 @@ const levels = [
     {
         id: 7,
         instructions: `
-            <p>The frogs need to cross the pond again, this time for some lilypads with plenty of space around them. Use a combination of <code class="help">justify-content</code> and <code class="help">align-items</code>.</p>
+            <p>The targets need to cross the sea again, this time for some ships with plenty of space around them. Use a combination of <code class="help">justify-content</code> and <code class="help">align-items</code>.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -150,7 +150,7 @@ const levels = [
     {
         id: 8,
         instructions: `
-            <p>The frogs need to get in the same order as their lilypads using <code class="help">flex-direction</code>. This CSS property defines the direction items are placed in the container, and accepts the following values:</p><ul><li><code>row</code>: Items are placed the same as the text direction.</li><li><code>row-reverse</code>: Items are placed opposite to the text direction.</li><li><code>column</code>: Items are placed top to bottom.</li><li><code>column-reverse</code>: Items are placed bottom to top.</li></ul>
+            <p>The ships need to get in the same order as their ships using <code class="help">flex-direction</code>. This CSS property defines the direction items are placed in the container, and accepts the following values:</p><ul><li><code>row</code>: Items are placed the same as the text direction.</li><li><code>row-reverse</code>: Items are placed opposite to the text direction.</li><li><code>column</code>: Items are placed top to bottom.</li><li><code>column-reverse</code>: Items are placed bottom to top.</li></ul>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -167,7 +167,7 @@ const levels = [
     {
         id: 9,
         instructions: `
-            <p>Help the frogs find their column of lilypads using <code class="help">flex-direction</code>. This CSS property defines the direction items are placed in the container, and accepts the following values:</p><ul><li><code>row</code>: Items are placed the same as the text direction.</li><li><code>row-reverse</code>: Items are placed opposite to the text direction.</li><li><code>column</code>: Items are placed top to bottom.</li><li><code>column-reverse</code>: Items are placed bottom to top.</li></ul>
+            <p>Help the ships find their column of ships using <code class="help">flex-direction</code>. This CSS property defines the direction items are placed in the container, and accepts the following values:</p><ul><li><code>row</code>: Items are placed the same as the text direction.</li><li><code>row-reverse</code>: Items are placed opposite to the text direction.</li><li><code>column</code>: Items are placed top to bottom.</li><li><code>column-reverse</code>: Items are placed bottom to top.</li></ul>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -184,7 +184,7 @@ const levels = [
     {
         id: 10,
         instructions: `
-            <p>Help the frogs get to their own lilypads. Although they seem close, it will take both <code class="help">flex-direction</code> and <code class="help">justify-content</code> to get them there.</p><p>Notice that when you set the direction to a reversed row or column, start and end are also reversed.</p>
+            <p>Help the ships get to their own ships. Although they seem close, it will take both <code class="help">flex-direction</code> and <code class="help">justify-content</code> to get them there.</p><p>Notice that when you set the direction to a reversed row or column, start and end are also reversed.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -202,7 +202,7 @@ const levels = [
     {
         id: 11,
         instructions: `
-            <p>Help the frogs find their lilypads using <code class="help">flex-direction</code> and <code class="help">justify-content</code>.</p><p>Notice that when the flex direction is a column, <code class="help">justify-content</code> changes to the vertical and <code class="help">align-items</code> to the horizontal.</p>
+            <p>Help the ships find their ships using <code class="help">flex-direction</code> and <code class="help">justify-content</code>.</p><p>Notice that when the flex direction is a column, <code class="help">justify-content</code> changes to the vertical and <code class="help">align-items</code> to the horizontal.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -220,7 +220,7 @@ const levels = [
     {
         id: 12,
         instructions: `
-            <p>Help the frogs find their lilypads using <code class="help">flex-direction</code> and <code class="help">justify-content</code>.</p><p>Notice that when the flex direction is a column, <code class="help">justify-content</code> changes to the vertical and <code class="help">align-items</code> to the horizontal.</p>
+            <p>Help the ships find their ships using <code class="help">flex-direction</code> and <code class="help">justify-content</code>.</p><p>Notice that when the flex direction is a column, <code class="help">justify-content</code> changes to the vertical and <code class="help">align-items</code> to the horizontal.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -238,7 +238,7 @@ const levels = [
     {
         id: 13,
         instructions: `
-            <p>Help the frogs find their lilypads using <code class="help">flex-direction</code> and <code class="help">justify-content</code>.</p><p>Notice that when the flex direction is a column, <code class="help">justify-content</code> changes to the vertical and <code class="help">align-items</code> to the horizontal.</p>
+            <p>Help the ships find their ships using <code class="help">flex-direction</code> and <code class="help">justify-content</code>.</p><p>Notice that when the flex direction is a column, <code class="help">justify-content</code> changes to the vertical and <code class="help">align-items</code> to the horizontal.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -257,7 +257,7 @@ const levels = [
     {
         id: 14,
         instructions: `
-            <p>Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the <code class="help">order</code> property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).</p><p>Use the <code class="help">order</code> property to reorder the frogs according to their lilypads.</p>
+            <p>Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the <code class="help">order</code> property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).</p><p>Use the <code class="help">order</code> property to reorder the ships according to their ships.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;\n}\n\n.red {",
@@ -273,7 +273,7 @@ const levels = [
     {
         id: 15,
         instructions: `
-            <p>Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the <code class="help">order</code> property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).</p><p>Use the <code class="help">order</code> property to reorder the frogs according to their lilypads.</p>
+            <p>Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the <code class="help">order</code> property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).</p><p>Use the <code class="help">order</code> property to reorder the ships according to their ships.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;\n}\n\n.red {",
@@ -305,7 +305,7 @@ const levels = [
     {
         id: 17,
         instructions: `
-            <p>Combine <code class="help">order</code> with <code class="help">align-self</code> to help the frogs to their destinations.</p>
+            <p>Combine <code class="help">order</code> with <code class="help">align-self</code> to help the ships to their destinations.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;\n}\n\n.red {",
@@ -324,7 +324,7 @@ const levels = [
     {
         id: 18,
         instructions: `
-            <p>Oh no! The frogs are all squeezed onto a single row of lilypads. Spread them out using the <code class="help">flex-wrap</code> property, which accepts the following values:</p><ul><li><code>nowrap</code>: Every item is fit to a single line.</li><li><code>wrap</code>: Items wrap around to additional lines.</li><li><code>wrap-reverse</code>: Items wrap around to additional lines in reverse.</li></ul>
+            <p>Oh no! The ships are all squeezed onto a single row of ships. Spread them out using the <code class="help">flex-wrap</code> property, which accepts the following values:</p><ul><li><code>nowrap</code>: Every item is fit to a single line.</li><li><code>wrap</code>: Items wrap around to additional lines.</li><li><code>wrap-reverse</code>: Items wrap around to additional lines in reverse.</li></ul>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
@@ -378,7 +378,7 @@ const levels = [
     {
         id: 21,
         instructions: `
-            <p>DOESN'T WORK, SORRY. WIP</p><p>The two properties <code class="help">flex-direction</code> and <code class="help">flex-wrap</code> are used so often together that the shorthand property <code class="help">flex-flow</code> was created to combine them. This shorthand property accepts the value of the two properties separated by a space.</p><p>For example, you can use <code>flex-flow: row wrap</code> to set rows and wrap them.</p><p>Try using <code class="help">flex-flow</code> to repeat the previous level.</p>
+            <p>The two properties <code class="help">flex-direction</code> and <code class="help">flex-wrap</code> are used so often together that the shorthand property <code class="help">flex-flow</code> was created to combine them. This shorthand property accepts the value of the two properties separated by a space.</p><p>For example, you can use <code>flex-flow: row wrap</code> to set rows and wrap them.</p><p>Try using <code class="help">flex-flow</code> to repeat the previous level.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;\n\tflex-wrap: wrap;",
@@ -399,7 +399,7 @@ const levels = [
     {
         id: 22,
         instructions: `
-            <p>DOESN'T WORK, SORRY. WIP</p><p>Now the current has bunched the lilypads at the bottom. Use <code class="help">align-content</code> to guide the frogs there.</p>
+            <p>Now the current has bunched the ships at the bottom. Use <code class="help">align-content</code> to guide the ships there.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;\n\tflex-wrap: wrap;",
@@ -420,7 +420,7 @@ const levels = [
     {
         id: 23,
         instructions: `
-            <p>DOESN'T WORK, SORRY. WIP</p><p>The frogs have had a party, but it is time to go home. Use a combination of <code class="help">flex-direction</code> and <code class="help">align-content</code> to get them to their lilypads.</p>
+            <p>The ships have had a party, but it is time to go home. Use a combination of <code class="help">flex-direction</code> and <code class="help">align-content</code> to get them to their ships.</p>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;\n\tflex-wrap: wrap;",
@@ -442,7 +442,7 @@ const levels = [
     {
         id: 24,
         instructions: `
-            <p>Target the battleships one last time by using the CSS properties you've learned:</p><ul><li><code class="help">justify-content</code></li><li><code class="help">align-items</code></li><li><code class="help">flex-direction</code></li><li><code class="help">order</code></li><li><code class="help">align-self</code></li><li><code class="help">flex-wrap</code></li><li><code class="help">flex-flow</code></li><li><code class="help">align-content</code><img src="https://code.org/api/hour/finish_flexbox_froggy.png"></li></ul>
+            <p>Target the battleships one last time by using the CSS properties you've learned:</p><ul><li><code class="help">justify-content</code></li><li><code class="help">align-items</code></li><li><code class="help">flex-direction</code></li><li><code class="help">order</code></li><li><code class="help">align-self</code></li><li><code class="help">flex-wrap</code></li><li><code class="help">flex-flow</code></li><li><code class="help">align-content</code></li></ul>
         `,
         editor: {
             codeBefore: "#sea {\n\tdisplay: flex;",
