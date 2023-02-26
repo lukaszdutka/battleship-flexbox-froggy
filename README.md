@@ -14,7 +14,7 @@ React, JS
 
 # Gifs
 
-Solving first level. As you can see the board reacts in the real time.
+Solving level 5. As you can see the board reacts in the real time.
 ![](battleships_lvl5.gif)
 
 More complicated one.
