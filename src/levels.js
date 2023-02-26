@@ -312,7 +312,7 @@ const levels = [
             codeAfter: "}",
             requiredLines: 2
         },
-        board: flat(green(3), red(2)),
+        board: flat(red(), green(), red(), green(2)),
         styles: {
             ships_red: {
                 "order": 1,
